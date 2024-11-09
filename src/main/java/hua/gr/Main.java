@@ -5,15 +5,14 @@ public class Main {
 
         if (args.length > 0) {
             if (args[0].equals("-list")) {
-                for (Integer recipes = 1; recipes <= args.length - 1; recipes++) { // recipes=1 so we ignore the first "-list" arg
-                    System.out.println("Passed2");
-                }
+                RecipeParser Task = new RecipeParser(args);
+                
             } 
             else if (!args[0].equals("-list") && args.length > 1) {
                 throw new IllegalArgumentException("No valid syntax, add -list for more than 1 recipes");
             } 
             else {
-                System.out.println("Passed");
+                RecipeParser Task = new RecipeParser(args[0]);
             }
         } 
         else {
