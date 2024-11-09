@@ -26,7 +26,7 @@ public class Ingredient {
     public void addQuantity(double quantity){
         this.quantity += quantity;
     }
-
+    
     public String toString(){
         if (unit.isEmpty()){
             return name + " " + quantity;
